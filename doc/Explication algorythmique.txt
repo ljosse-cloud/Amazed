@@ -1,0 +1,63 @@
+Étant donné un graphe muni de ses noeuds/sommets, l’algorithme BFS permet de déterminer un des plus courts chemins reliant deux noeuds.
+
+L’algorithme prend en entrée un graphe non pondéré et l’identifiant du sommet source s. Le graphe d’entrée peut être orienté ou non orienté (c’est le cas avec le labyrinthe), mais cela n’a pas d’importance pour l’algorithme. 
+
+L’algorithme peut être compris comme un feu se propageant sur le graphe : à l’étape zéro, seul le sommet source s est en feu. À chaque étape, le feu brûlant à chaque sommet se propage à tous ses voisins. Lors d’une itération de l’algorithme, ce “cercle de feu” est étendu en largeur d’un cran (d’où le nom de l’algorithme Breadth-first Search). Plus concrètement, l’algorithme peut être formulé comme suit : on crée une file d’attente q qui contiendra les sommets à traiter et un tableau booléen utilisé[] qui indique pour chaque sommet s’il a été allumé (ou visité) ou non. 
+
+Initialement, on ajoute le sommet source s à la file d’attente et on définit utilisé[s] = Vrai, et pour tous les autres sommets v, on dit que utilisé[v] = Faux. Ensuite, on boucle ceci jusqu’à ce que la file d'attente soit vide, et à chaque itération, on extrait un sommet de l’avant de la file d’attente. On parcourt toutes les arêtes sortant de ce sommet et si certaines de ces arêtes mènent à des sommets qui ne sont pas encore allumés, on les met en feu et on les place dans la file d’attente. 
+
+En conséquence, lorsque la file d’attente est vide, le “cercle de feu” contient tous les sommets accessibles à partir du sommet source s, chaque sommet atteint de la manière la plus courte possible. On peut également calculer les longueurs des plus courts chemins (ce qui nécessite simplement le maintien d’un tableau de longueurs de chemin distance[]) ainsi que sauvegarder des informations pour restaurer tous ces plus courts chemins (pour cela, il est nécessaire de maintenir un tableau parent[], qui stocke pour chaque sommet le sommet à partir duquel nous l’avions atteint). 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Le pseudo-code : 
+
+Entrée : 
+Une liste d'adjacences adj
+Le nombre de sommets n 
+La source/noeud de départ s
+La destination f
+
+
+File d’attente q 
+Un tableau de booléens utilisé
+Deux tableau d’entiers, distance et parent (initialisé à -1)
+
+Ajouter s à q
+utilisé[s] ← Vrai 
+Parent[s] ← -1 (pour dire que s n’a pas de “parent”)
+Distance[s] ← 0 
+
+Tant que q n’est pas vide 
+	Considérer v le sommet de la file d’attente 
+	Retirer ce sommet de la file 
+	Pour chaque noeud u dans adj[v]  
+		Si utilisé[u] est Faux 
+			utilisé[u] ← Vrai
+Distance[u] ← Distance[v] + 1
+	Parent[u] ← v
+			Ajouter u dans la file d’attente
+			
+Si utilisé[f] est Faux 
+	Retourner qu’il n’y a pas de chemin 
+Sinon 
+	On retourne le chemin qui peut être reconstruit en remontant en arrière à l’aide du tableau parent 
+
+L’algorithme est en O(V + E), où V est le nombre de sommets et E le nombre d’arêtes.

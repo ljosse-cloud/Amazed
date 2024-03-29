@@ -1,0 +1,32 @@
+    Bienvenue sur Amaze d !
+Ici, vous pouvez creer des labyrinthes, verifier si 
+ils sont resolvables et les partager avec vos amis !
+
+----------------------------------
+Pour cela, il faut aller dans le ficher source, puis dans 
+le fichier ressources. Ensuite, transmettez le fichier 
+voulu à votre ami.
+Si vous recevez un fichier, il faudra le mettre dans ce 
+meme fichier ressources. Puis lancez le jeu, appuyez sur 
+ouvrir, et entrez le nom du fichier voulu.
+----------------------------------
+
+Les commandes :
+Espace : passer d'un mode (edition ou jeu) a l'autre
+Escape : Acceder au menu
+Clic Droit : Retirer un bloc classique
+Clic Gauche : Placer un bloc
+Ctrl + S : Sauvegarder le labyrinthe
+Ctrl + Clic droit : Deplacer le point d arrivee
+Ctrl + Clic gauche: Deplacer le point de depart
+P : Placer un portail. Les portails 
+    n'apparaissent qu'un fois les deux poses !
+S : Affiche la solution du labyrinthe. Il doit faire au
+    maximum 200x200 blocs !
+
+Dans le mode edition, les blocs cyan sont les
+murs, le bleu royal le depart, le rouge
+l’arrivée, les blancs sont des portails.
+En jeu, vous vous deplacez avec les fleches 
+directionnels.
+Amusez-vous bien !

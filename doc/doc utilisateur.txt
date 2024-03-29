@@ -1,0 +1,40 @@
+Document Technique
+
+Bienvenue sur Amaze'd !
+Ici, il est possile de creer des labyrinthe, mais aussi de verifier si ils sont resolvables ou non.
+De plus, vous pouvez les sauvegrader pour povoir par exemple les envoyer a vos amis.
+
+Symboliques :
+Les blocs verts sont des murs, tandis que le bloc bleu royal represente le depart, et que le bloc rouge symbolise l'arrivée.
+
+
+Les commandes sont assez simples :
+- Espace : pour passer du mode edition a celui de jeu
+- Escape : Pour acceder au menu, ou il est possible de sauvegarder et d'ouvir des fichiers, de meme que d'en creer un nouveau.
+            Il est aussi possible d'acceder a l'aide en jeu
+- Clic Droit : Retirer un bloc de mur
+- Clic Gauche : Placer un mur
+- Ctrl + Clic Droit : Placer le point de depart
+- Ctrl + Clic Gauche : Placer le point d'arrivée
+- P : Placer un portail. Les portails sont par paire et n'apparaissent que quand ils ont tout deux etaient placés.
+- Ctrl + S : Permet de sauvefarder un fichier. Il est aussi possible de passer par le bouton "Sauvegarder" dans le menu
+- S : Permet d'afficher le chamin solution du labyrinthe. Il est possible qu'il en existe plusieurs ! 
+			Attention, l'algorithme de resolkution ne permet de calculer le chemin que pour des labyrinthe d'au maximum 200x200 blocs !
+			
+Les boutons :
+Le menu contient 6 boutons :
+- Aide : Permet d'acceder a l'aide en jeu
+- Nouveau : Charge une map vide
+- Ouvrir : Permet d'ouvrir les maps. Une option permet d'ouvrir la map initiale
+- Sauvegarder : Permet la sauvegarde de la map actuelle.
+
+- Un bouton pour couper ou non la musique qui est diffusée en mode jeu
+- Un autre pour acceder a l'aide en jeu
+- Un bouton "retour" pour revenir sur le mode edition.
+
+En mode jeu et edition, un bouton en bas a gauche permet de retourner au menu.
+
+
+			
+
+
